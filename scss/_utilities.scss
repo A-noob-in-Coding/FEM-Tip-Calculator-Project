@@ -1,0 +1,10 @@
+@function px-to-rem($pixels, $root-font-size: 16px) {
+    @return #{$pixels / $root-font-size}rem;
+  }
+
+@mixin FlexCentre
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
