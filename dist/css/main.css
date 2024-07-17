@@ -145,6 +145,16 @@ body .main-container .calculator-container .input-section .number-of-ppl-input {
   flex-direction: column;
   align-items: flex-start;
 }
+body .main-container .calculator-container .input-section .number-of-ppl-input .text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .main-container .calculator-container .input-section .number-of-ppl-input .text-container .error-ppl-input {
+  display: none;
+  color: red;
+}
 body .main-container .calculator-container .input-section .number-of-ppl-input .ppl-icon {
   position: relative;
   top: -1.5rem;
@@ -201,7 +211,7 @@ body .main-container .calculator-container .result-section .total-amount-result 
   justify-content: space-between;
 }
 body .main-container .calculator-container .result-section .total-amount-result .left-section-total {
-  color: hsl(189, 41%, 97%);
+  color: hsl(185, 41%, 84%);
 }
 body .main-container .calculator-container .result-section .total-amount-result .right-section-total {
   font-size: 2rem;

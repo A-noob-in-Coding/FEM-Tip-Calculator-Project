@@ -146,6 +146,19 @@ body {
                     @include FlexCentre;
                     flex-direction: column;
                     align-items: flex-start;
+                    
+                    .text-container
+                    {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .error-ppl-input
+                        {
+                            display: none;
+                            color: red;
+                        }
+                    }
 
                     .ppl-icon
                     { 
@@ -215,7 +228,7 @@ body {
                     justify-content: space-between;
                     .left-section-total
                     {
-                        color: $Very-light-grayish-cyan;
+                        color: $Light-grayish-cyan;
                     }
                     .right-section-total
                     {
