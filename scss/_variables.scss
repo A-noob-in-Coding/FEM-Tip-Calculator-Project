@@ -7,5 +7,9 @@ $Light-grayish-cyan: hsl(185, 41%, 84%);
 $Very-light-grayish-cyan: hsl(189, 41%, 97%);
 $White: hsl(0, 0%, 100%);
 $Font-size-form-inputs: 24px;
-$Font-Family: 'space-mono' sans-serif;
 $Font-Weights: 700;
+@font-face {
+    font-family: spaceMono;
+    src: url('/font/SpaceMono-Regular.ttf');
+}
+$Font-Family: spaceMono;

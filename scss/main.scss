@@ -4,8 +4,189 @@
 @import './utilities';
 //funtion to convert pixels to rem
 
-body
-{
+body {
+    min-height: 100vh;
     font-family: $Font-Family;
-    
+    @include FlexCentre;
+    background-color: $Light-grayish-cyan;
+    .main-container {
+        background-color: $Light-grayish-cyan;
+        min-width: 80%;
+        @include FlexCentre;
+        gap: 3rem;
+        flex-direction: column;
+        padding: 1rem;
+
+        .logo-container {
+            font-weight: $Font-Weights;
+            color: $Dark-grayish-cyan;
+            letter-spacing: 1rem;
+        }
+
+        .calculator-container {
+            width: 90%;
+            padding: 1rem;
+            background-color: $White;
+            border-radius: 10px;
+            @include FlexCentre;
+            justify-content: space-between;
+            gap: 1rem;
+
+            .input-section {
+                width: 100%;
+                @include FlexCentre;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+
+                .bill-input {
+                    width: 100%;
+                    @include FlexCentre;
+                    justify-content: flex-start;
+                    label
+                    {
+                        position: relative;
+                        width: 100%;
+                        .dollar-icon
+                        {
+                            position: relative;
+                            top: -1.5rem;
+                            left: 1rem;
+                        }
+                        margin-bottom: -1rem;
+                    }
+
+                    
+                    input {
+                        padding: 1rem;
+                        height: 2rem;
+                        border-radius: 10px;
+                        width: 100%;
+                        font-weight: $Font-Weights;
+                        text-align: end;
+                        border: none;
+                        color: $Very-dark-cyan;
+                        font-family: $Font-Family;
+                        background-color: $Very-light-grayish-cyan;
+                    }
+                    input[type="number"]::-webkit-inner-spin-button,
+                    input[type="number"]::-webkit-outer-spin-button
+                    {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+                .tip-input {
+                    width: 100%;
+                    .radio-section {
+                        
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 0.5rem;
+                        font-weight: $Font-Weights;
+
+                        label {
+                            border-radius: 10px;
+                            padding: 0.5rem;
+                            background-color: $Very-dark-cyan;
+                            color: $Light-grayish-cyan;
+                            text-align: center;
+                            cursor: pointer;
+
+                        }
+
+                        label:hover {
+                            background-color: $Strong-cyan;
+                            color: $Very-dark-cyan;
+                        }
+
+                        .custom {
+                            color: $Very-dark-cyan;
+                            background-color: $Very-light-grayish-cyan;
+                            input[type="number"]::-webkit-inner-spin-button,
+                            input[type="number"]::-webkit-outer-spin-button
+                            {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                            input
+                            {
+                                background-color: $Very-light-grayish-cyan;
+                                font-family: $Font-Family;
+                                color: $Very-dark-cyan;
+                                font-weight: $Font-Weights;
+                                padding: 0rem 0.5rem 0rem 0.5rem;
+                                text-align: right;
+                                height: 100%;
+                                width: 100%;
+                                display: none;
+                                border: none;
+                                border-radius: 6px;
+                            }
+                        }
+                        .custom:hover
+                        {
+                            background-color: $Very-light-grayish-cyan;
+                            input
+                            {
+                                display: block;
+                            }
+                            .custom-label
+                            {
+                                display: none;
+                            }
+                        }
+                        
+                    }
+                }
+
+                .number-of-ppl-input {
+                    width: 100%;
+                    @include FlexCentre;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .ppl-icon
+                    { 
+                        position: relative;
+                        top: -1.5rem;
+                        left: 1rem;
+                    }
+
+                    label {
+                        color: $Very-dark-cyan;
+                    }
+
+                    input {
+                        color: $Very-dark-cyan;
+                        font-family: $Font-Family;
+                        font-weight: $Font-Weights;
+                        text-align: end;
+                        padding: 1rem;
+                        height: 2rem;
+                        width: 100%;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $Very-light-grayish-cyan;
+                    }
+
+                    input[type="number"]::-webkit-inner-spin-button,
+                    input[type="number"]::-webkit-outer-spin-button
+                    {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+            }
+
+            .result-section {
+                width: 100%;
+                background-color: $Very-dark-cyan;
+                border-radius: 10px;
+            }
+        }
+    }
+
 }

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: spaceMono;
+  src: url("/font/SpaceMono-Regular.ttf");
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,5 +9,169 @@
 }
 
 body {
-  font-family: "space-mono" sans-serif;
+  min-height: 100vh;
+  font-family: spaceMono;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(185, 41%, 84%);
+}
+body .main-container {
+  background-color: hsl(185, 41%, 84%);
+  min-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+  padding: 1rem;
+}
+body .main-container .logo-container {
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  letter-spacing: 1rem;
+}
+body .main-container .calculator-container {
+  width: 90%;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+body .main-container .calculator-container .input-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+body .main-container .calculator-container .input-section .bill-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+body .main-container .calculator-container .input-section .bill-input label {
+  position: relative;
+  width: 100%;
+  margin-bottom: -1rem;
+}
+body .main-container .calculator-container .input-section .bill-input label .dollar-icon {
+  position: relative;
+  top: -1.5rem;
+  left: 1rem;
+}
+body .main-container .calculator-container .input-section .bill-input input {
+  padding: 1rem;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 700;
+  text-align: end;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  font-family: spaceMono;
+  background-color: hsl(189, 41%, 97%);
+}
+body .main-container .calculator-container .input-section .bill-input input[type=number]::-webkit-inner-spin-button,
+body .main-container .calculator-container .input-section .bill-input input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .main-container .calculator-container .input-section .tip-input {
+  width: 100%;
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  font-weight: 700;
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section label {
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+  text-align: center;
+  cursor: pointer;
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section label:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section .custom {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section .custom input[type=number]::-webkit-inner-spin-button,
+body .main-container .calculator-container .input-section .tip-input .radio-section .custom input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section .custom input {
+  background-color: hsl(189, 41%, 97%);
+  font-family: spaceMono;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  text-align: right;
+  height: 100%;
+  width: 100%;
+  display: none;
+  border: none;
+  border-radius: 6px;
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section .custom:hover {
+  background-color: hsl(189, 41%, 97%);
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section .custom:hover input {
+  display: block;
+}
+body .main-container .calculator-container .input-section .tip-input .radio-section .custom:hover .custom-label {
+  display: none;
+}
+body .main-container .calculator-container .input-section .number-of-ppl-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body .main-container .calculator-container .input-section .number-of-ppl-input .ppl-icon {
+  position: relative;
+  top: -1.5rem;
+  left: 1rem;
+}
+body .main-container .calculator-container .input-section .number-of-ppl-input label {
+  color: hsl(183, 100%, 15%);
+}
+body .main-container .calculator-container .input-section .number-of-ppl-input input {
+  color: hsl(183, 100%, 15%);
+  font-family: spaceMono;
+  font-weight: 700;
+  text-align: end;
+  padding: 1rem;
+  height: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(189, 41%, 97%);
+}
+body .main-container .calculator-container .input-section .number-of-ppl-input input[type=number]::-webkit-inner-spin-button,
+body .main-container .calculator-container .input-section .number-of-ppl-input input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .main-container .calculator-container .result-section {
+  width: 100%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */
