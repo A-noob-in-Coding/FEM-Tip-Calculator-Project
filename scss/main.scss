@@ -185,6 +185,62 @@ body {
                 width: 100%;
                 background-color: $Very-dark-cyan;
                 border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 1rem;
+                .tip-amount-result
+                {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .left-section-tip
+                    {
+                        color: $Light-grayish-cyan;
+                    }
+                    .right-section-tip
+                    {
+                        color: $Strong-cyan;
+                        font-size: 2rem;
+                    }
+                }
+                .total-amount-result
+                {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .left-section-total
+                    {
+                        color: $Very-light-grayish-cyan;
+                    }
+                    .right-section-total
+                    {
+                        font-size: 2rem;
+                        color: $Strong-cyan;
+                    }
+                }
+                button
+                {
+                    justify-content: center;
+                    font-family: $Font-Family;
+                    font-size: 1.2rem;
+                    font-weight: $Font-Weights;
+                    color: $Very-dark-cyan;
+                    background-color: $Strong-cyan;
+                    margin-top: 3rem;
+                    padding:1rem;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: none;
+                }
+                button:hover
+                {
+                    cursor: pointer;
+                }
             }
         }
     }

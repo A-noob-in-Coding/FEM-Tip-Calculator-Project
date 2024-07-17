@@ -174,4 +174,52 @@ body .main-container .calculator-container .result-section {
   width: 100%;
   background-color: hsl(183, 100%, 15%);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+body .main-container .calculator-container .result-section .tip-amount-result {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .main-container .calculator-container .result-section .tip-amount-result .left-section-tip {
+  color: hsl(185, 41%, 84%);
+}
+body .main-container .calculator-container .result-section .tip-amount-result .right-section-tip {
+  color: hsl(172, 67%, 45%);
+  font-size: 2rem;
+}
+body .main-container .calculator-container .result-section .total-amount-result {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .main-container .calculator-container .result-section .total-amount-result .left-section-total {
+  color: hsl(189, 41%, 97%);
+}
+body .main-container .calculator-container .result-section .total-amount-result .right-section-total {
+  font-size: 2rem;
+  color: hsl(172, 67%, 45%);
+}
+body .main-container .calculator-container .result-section button {
+  justify-content: center;
+  font-family: spaceMono;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  margin-top: 3rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+body .main-container .calculator-container .result-section button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
