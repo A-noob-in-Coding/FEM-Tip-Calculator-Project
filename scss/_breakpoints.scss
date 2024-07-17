@@ -1,21 +1,23 @@
 $breakpointsForMediaQueries: (
-  "small": 480px,
+  "small": 652px,
   "medium": 768px,
-  "large": 1024px,
-  "xlarge": 1200px
+  "large": 1024px
 );
 
-@mixin media($breakpoint)
-{
-    @if map-has-key($breakpointsForMediaQueries , $breakpoint)
-    {
-        @media (min-width:map-get($breakpointsForMediaQueries,$breakpoint))
-        {
-            @content;
-        }
+@mixin media($breakpoint) {
+  @if map-has-key($breakpointsForMediaQueries, $breakpoint) {
+    // Use `max-width` for small and medium breakpoints to target smaller screens
+    @if $breakpoint == 'small' or $breakpoint == 'medium' {
+      @media (max-width: map-get($breakpointsForMediaQueries, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      // Use `min-width` for large and xlarge breakpoints to target larger screens
+      @media (min-width: map-get($breakpointsForMediaQueries, $breakpoint)) {
+        @content;
+      }
     }
-    @else
-    {
-        @warn "No breakpoint found";
-    }
+  } @else {
+    @warn "No breakpoint found for #{$breakpoint}.";
+  }
 }

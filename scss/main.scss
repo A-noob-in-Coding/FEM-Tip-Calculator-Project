@@ -1,7 +1,7 @@
 @import './variables';
 @import './reset';
-@import './breakpoints';
 @import './utilities';
+@import './breakpoints';
 //funtion to convert pixels to rem
 
 body {
@@ -9,6 +9,7 @@ body {
     font-family: $Font-Family;
     @include FlexCentre;
     background-color: $Light-grayish-cyan;
+
     .main-container {
         background-color: $Light-grayish-cyan;
         min-width: 80%;
@@ -43,20 +44,21 @@ body {
                     width: 100%;
                     @include FlexCentre;
                     justify-content: flex-start;
-                    label
-                    {
+
+                    label {
                         position: relative;
                         width: 100%;
-                        .dollar-icon
-                        {
+
+                        .dollar-icon {
                             position: relative;
                             top: -1.5rem;
                             left: 1rem;
                         }
+
                         margin-bottom: -1rem;
                     }
 
-                    
+
                     input {
                         padding: 1rem;
                         height: 2rem;
@@ -69,9 +71,9 @@ body {
                         font-family: $Font-Family;
                         background-color: $Very-light-grayish-cyan;
                     }
+
                     input[type="number"]::-webkit-inner-spin-button,
-                    input[type="number"]::-webkit-outer-spin-button
-                    {
+                    input[type="number"]::-webkit-outer-spin-button {
                         -webkit-appearance: none;
                         margin: 0;
                     }
@@ -79,8 +81,9 @@ body {
 
                 .tip-input {
                     width: 100%;
+
                     .radio-section {
-                        
+
                         display: grid;
                         grid-template-columns: repeat(3, 1fr);
                         gap: 0.5rem;
@@ -93,7 +96,6 @@ body {
                             color: $Light-grayish-cyan;
                             text-align: center;
                             cursor: pointer;
-
                         }
 
                         label:hover {
@@ -104,14 +106,14 @@ body {
                         .custom {
                             color: $Very-dark-cyan;
                             background-color: $Very-light-grayish-cyan;
+
                             input[type="number"]::-webkit-inner-spin-button,
-                            input[type="number"]::-webkit-outer-spin-button
-                            {
+                            input[type="number"]::-webkit-outer-spin-button {
                                 -webkit-appearance: none;
                                 margin: 0;
                             }
-                            input
-                            {
+
+                            input {
                                 background-color: $Very-light-grayish-cyan;
                                 font-family: $Font-Family;
                                 color: $Very-dark-cyan;
@@ -125,19 +127,19 @@ body {
                                 border-radius: 6px;
                             }
                         }
-                        .custom:hover
-                        {
+
+                        .custom:hover {
                             background-color: $Very-light-grayish-cyan;
-                            input
-                            {
+
+                            input {
                                 display: block;
                             }
-                            .custom-label
-                            {
+
+                            .custom-label {
                                 display: none;
                             }
                         }
-                        
+
                     }
                 }
 
@@ -146,22 +148,20 @@ body {
                     @include FlexCentre;
                     flex-direction: column;
                     align-items: flex-start;
-                    
-                    .text-container
-                    {
+
+                    .text-container {
                         width: 100%;
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        .error-ppl-input
-                        {
+
+                        .error-ppl-input {
                             display: none;
                             color: red;
                         }
                     }
 
-                    .ppl-icon
-                    { 
+                    .ppl-icon {
                         position: relative;
                         top: -1.5rem;
                         left: 1rem;
@@ -185,8 +185,7 @@ body {
                     }
 
                     input[type="number"]::-webkit-inner-spin-button,
-                    input[type="number"]::-webkit-outer-spin-button
-                    {
+                    input[type="number"]::-webkit-outer-spin-button {
                         -webkit-appearance: none;
                         margin: 0;
                     }
@@ -204,40 +203,40 @@ body {
                 align-items: flex-start;
                 gap: 1rem;
                 padding: 1rem;
-                .tip-amount-result
-                {
+
+                .tip-amount-result {
                     width: 100%;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    .left-section-tip
-                    {
+
+                    .left-section-tip {
                         color: $Light-grayish-cyan;
                     }
-                    .right-section-tip
-                    {
+
+                    .right-section-tip {
                         color: $Strong-cyan;
                         font-size: 2rem;
                     }
                 }
-                .total-amount-result
-                {
+
+                .total-amount-result {
                     width: 100%;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    .left-section-total
-                    {
+
+                    .left-section-total {
                         color: $Light-grayish-cyan;
                     }
-                    .right-section-total
-                    {
+
+                    .right-section-total {
                         font-size: 2rem;
                         color: $Strong-cyan;
                     }
                 }
-                button
-                {
+
+                button {
                     justify-content: center;
                     font-family: $Font-Family;
                     font-size: 1.2rem;
@@ -245,17 +244,193 @@ body {
                     color: $Very-dark-cyan;
                     background-color: $Strong-cyan;
                     margin-top: 3rem;
-                    padding:1rem;
+                    padding: 1rem;
                     width: 100%;
                     border-radius: 10px;
                     border: none;
                 }
-                button:hover
-                {
+
+                button:hover {
                     cursor: pointer;
+                }
+            }
+               
+        }
+    }
+}
+
+@include media('small')
+{
+    body
+    {
+        min-height: 100vh;
+        .main-container
+        {
+            padding: none;
+            width: 100%;
+            .calculator-container
+            {
+                padding: none;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                .text-container
+                {
+                    flex-direction: column;
+                }   
+            }
+        }
+           
+    }
+}
+
+@include media('medium')
+{
+    body
+    {
+        .main-container
+        {
+            width: 100%;
+            height: auto;
+            .calculator-container
+            {
+                width: 100%;
+                padding: 2rem;
+                .input-section
+                {
+                    .bill-input
+                    {
+                        font-size:2rem;
+                        .dollar-icon svg
+                        {
+                            height: 100%;
+                            position: relative;
+                            top: -1.6rem;
+                        }
+                        input
+                        {
+                            font-size: 2rem;
+                            height: 3rem;
+                        }
+                    }
+                    .tip-input
+                    {
+                        p
+                        {
+                            font-size: 1.5rem;
+                        }
+                        .radio-section
+                        {
+                            gap: 1rem;
+                            label
+                            {
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .custom-label
+                        {
+                            font-size: 1.5rem;
+                        }
+                        .custom-input
+                        {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .number-of-ppl-input
+                    {
+                        .text-container
+                        {
+                            flex-direction: column;
+                        }
+                        font-size: 1.5rem;
+                        input
+                        {
+                            font-size: 2rem;
+                            height: 3rem;
+                        }
+                        .ppl-icon svg
+                        {
+                            position: relative;
+                            top: -1.2rem;
+                        }
+                    }
+                }
+                .result-section
+                {
+                    height: 100%;
+                    padding: 2rem;
+                    .tip-amount-result
+                    {
+                        .left-section-tip
+                        {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .total-amount-result
+                    {
+                        .left-section-total
+                        {
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
         }
     }
+    
+}
 
+@include media('large')
+{
+    body
+    {
+        .main-container
+        {
+            width: 90%;
+            .calculator-container
+            {
+                padding: 2rem;
+                font-size: 1.5rem;
+                .input-section
+                {
+                    padding: 2rem 0rem 2rem 0rem;
+                    .bill-input
+                    {
+                        input
+                        {
+                            color: $Very-dark-cyan;
+                            font-size: 1.5rem;
+                            height: 3rem;
+                        }   
+                        .dollar-icon
+                        {
+                            svg
+                            {
+                                position: relative;
+                                top: -1.2rem;
+                            }
+                        }
+                    }
+                    .number-of-ppl-input
+                    {
+                        input
+                        {
+                            color: $Very-dark-cyan;
+                            font-size: 1.5rem;
+                            height: 3rem;
+                        }
+                        .ppl-icon
+                        {
+                            svg
+                            {
+                                position: relative;
+                                top: -1.2rem;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }   
 }
