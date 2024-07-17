@@ -87,7 +87,7 @@ body {
                         display: grid;
                         grid-template-columns: repeat(3, 1fr);
                         gap: 0.5rem;
-                        font-weight: $Font-Weights;
+                        font-weight: $Font-Weights;                        
 
                         label {
                             border-radius: 10px;
@@ -98,10 +98,15 @@ body {
                             cursor: pointer;
                         }
 
-                        label:hover {
+                        label:hover,
+                        input[type='radio']:checked + label
+                            {
                             background-color: $Strong-cyan;
                             color: $Very-dark-cyan;
                         }
+
+            
+
 
                         .custom {
                             color: $Very-dark-cyan;
@@ -277,6 +282,23 @@ body {
                 .text-container
                 {
                     flex-direction: column;
+                }
+                .result-section
+                {
+                    .total-amount-result
+                    {
+                        .left-section-total
+                        {
+                            font-size: 1rem;
+                        }
+                    }
+                    .tip-amount-result
+                    {
+                        .left-section-tip
+                        {
+                            font-size: 1rem;
+                        }
+                    }
                 }   
             }
         }
@@ -361,13 +383,17 @@ body {
                     padding: 2rem;
                     .tip-amount-result
                     {
+                        display: flex;
+                        flex-direction: column;
                         .left-section-tip
                         {
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                         }
                     }
                     .total-amount-result
                     {
+                        display: flex;
+                        flex-direction: column;
                         .left-section-total
                         {
                             font-size: 1rem;
@@ -389,7 +415,7 @@ body {
             width: 90%;
             .calculator-container
             {
-                padding: 2rem;
+                padding: 1rem 2rem 1rem 2rem;
                 font-size: 1.5rem;
                 .input-section
                 {
@@ -409,6 +435,13 @@ body {
                                 position: relative;
                                 top: -1.2rem;
                             }
+                        }
+                    }
+                    .custom
+                    {
+                        input
+                        {
+                            font-size: 1.5rem;
                         }
                     }
                     .number-of-ppl-input

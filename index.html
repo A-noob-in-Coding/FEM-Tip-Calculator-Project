@@ -13,17 +13,6 @@
     rel="stylesheet">
   <title>Tip calculator app | Abd Ur Rehman</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -52,20 +41,20 @@
             Select Tip %
           </p>
           <div class="radio-section">
+            <input type="radio" name="tip-radio" class="tip-input" id="5" checked hidden>
             <label for="5">5%
-              <input type="radio" class="tip-input" id="5" hidden>
             </label>
+            <input type="radio" id="10" name="tip-radio" class="tip-input" hidden>
             <label for="10">10%
-              <input type="radio" id="10" class="tip-input" hidden>
             </label>
+            <input type="radio" id="15" name="tip-radio" class="tip-input" hidden>
             <label for="15">15%
-              <input type="radio" id="15" class="tip-input" hidden>
             </label>
+            <input type="radio" id="25" name="tip-radio" class="tip-input" hidden>
             <label for="25">25%
-              <input type="radio" id="25" class="tip-input" hidden>
             </label>
+            <input type="radio" id="50" name="tip-radio" class="tip-input" hidden>
             <label for="50">50%
-              <input type="radio" class="tip-input" hidden>
             </label>
             <label for="custom" class="custom">
               <span class="custom-label">Custom</span>
@@ -76,7 +65,7 @@
         <div class="number-of-ppl-input">
           <div class="text-container">
             <p>Number Of People</p>
-            <p class="error-ppl-input">Cannot be zero</p>
+            <p id="error-ppl-input" class="error-ppl-input">Cannot be zero</p>
           </div>
           <input type="number" name="ppl-input" id="ppl-input">
           <span class="ppl-icon">
@@ -99,23 +88,20 @@
         </div>
         <div class="total-amount-result">
           <div class="left-section-total">
-            <p>Total Amount</p>
+            <p>Total</p>
             <p>/ person</p>
           </div>
           <div class="right-section-total">
             <p>$<span id="total-amount">0.00</span></p>
           </div>
         </div>
-        <button class="reset">RESET</button>
+        <button class="reset" id="reset">RESET</button>
 
       </div>
     </div>
   </div>
 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  <script src="script.js"></script>
 </body>
 
 </html>
