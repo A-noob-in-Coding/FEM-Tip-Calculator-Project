@@ -9,7 +9,6 @@ body {
     font-family: $Font-Family;
     @include FlexCentre;
     background-color: $Light-grayish-cyan;
-
     .main-container {
         background-color: $Light-grayish-cyan;
         min-width: 80%;

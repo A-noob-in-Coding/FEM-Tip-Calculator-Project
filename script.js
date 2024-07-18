@@ -16,7 +16,7 @@ let number_of_ppl_input = document.getElementById('ppl-input')
 let errorEl = document.getElementById('error-ppl-input');
 number_of_ppl_input.value = 0;
 bill_input_El.value = 0
-
+tip_input_El_number.value = 0
 resetEl.addEventListener('click',() =>
     {
         document.getElementById('5').checked = true;
@@ -42,6 +42,29 @@ tip_input_El_number.addEventListener("input", () => {
     radios.forEach(radio => radio.checked = false);
     tip_display();
 });
+tip_input_El_number.addEventListener('click',()=>
+{
+    if(tip_input_El_number.value == 0)
+    {
+        tip_input_El_number.value = ''
+    }
+    
+}
+)
+bill_input_El.addEventListener('click' , () =>
+{
+    if(bill_input_El.value==0)
+    {
+        bill_input_El.value = ''
+    }
+})
+number_of_ppl_input.addEventListener('click',()=>
+{
+    if(number_of_ppl_input.value==0)
+    {
+        number_of_ppl_input.value = ''
+    }
+})
 // Assuming tip_input_El_radio is a NodeList of your radio buttons
 tip_input_El_radio.forEach(radio => {
     radio.addEventListener('change', (event) => {
