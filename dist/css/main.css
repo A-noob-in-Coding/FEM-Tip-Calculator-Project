@@ -1,7 +1,3 @@
-@font-face {
-  font-family: spaceMono;
-  src: url("/font/SpaceMono-Regular.ttf");
-}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,7 +6,7 @@
 
 body {
   min-height: 100vh;
-  font-family: spaceMono;
+  font-family: "Space Mono";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +73,7 @@ body .main-container .calculator-container .input-section .bill-input input {
   text-align: end;
   border: none;
   color: hsl(183, 100%, 15%);
-  font-family: spaceMono;
+  font-family: "Space Mono";
   background-color: hsl(189, 41%, 97%);
 }
 body .main-container .calculator-container .input-section .bill-input input[type=number]::-webkit-inner-spin-button,
@@ -118,7 +114,7 @@ body .main-container .calculator-container .input-section .tip-input .radio-sect
 }
 body .main-container .calculator-container .input-section .tip-input .radio-section .custom input {
   background-color: hsl(189, 41%, 97%);
-  font-family: spaceMono;
+  font-family: "Space Mono";
   color: hsl(183, 100%, 15%);
   font-weight: 700;
   padding: 0rem 0.5rem 0rem 0.5rem;
@@ -166,7 +162,7 @@ body .main-container .calculator-container .input-section .number-of-ppl-input l
 }
 body .main-container .calculator-container .input-section .number-of-ppl-input input {
   color: hsl(183, 100%, 15%);
-  font-family: spaceMono;
+  font-family: "Space Mono";
   font-weight: 700;
   text-align: end;
   padding: 1rem;
@@ -220,7 +216,7 @@ body .main-container .calculator-container .result-section .total-amount-result 
 }
 body .main-container .calculator-container .result-section button {
   justify-content: center;
-  font-family: spaceMono;
+  font-family: "Space Mono";
   font-size: 1.2rem;
   font-weight: 700;
   color: hsl(183, 100%, 15%);
